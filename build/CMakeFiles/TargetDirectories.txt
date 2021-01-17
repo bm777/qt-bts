@@ -1,0 +1,3 @@
+/home/bm7/qt/project/qt-homomorph/build/CMakeFiles/rebuild_cache.dir
+/home/bm7/qt/project/qt-homomorph/build/CMakeFiles/file.dir
+/home/bm7/qt/project/qt-homomorph/build/CMakeFiles/edit_cache.dir

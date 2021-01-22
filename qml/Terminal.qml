@@ -5,6 +5,10 @@ Item {
     id: terminal
     width: parent.width * 0.5
     height: parent.height * 1
+    property real value1: ct1.checked ? 1 : 0
+    property real value2: ct32.checked ? 32 : 0
+    property real value3: ctr.checked ? 1 : 0
+
 
     Item {
         id: first

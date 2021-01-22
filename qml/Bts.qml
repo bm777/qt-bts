@@ -5,7 +5,7 @@ Item {
     id: bts
     width: parent.width * 0.5
     height: parent.height * 0.65
-    property bool on: c_bts.checked
+    property real value: c_bts.checked ? 1 : 0
 
 
     Image {

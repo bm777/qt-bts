@@ -4,6 +4,12 @@ Item {
     id: infos
     width: parent.width * 0.5
     height: parent.height * 0.35
+    property real tv1: terminal.value1
+    property real tv2: terminal.value2
+    property real tv3: terminal.value3
+
+
+    property real bv: bts.value
 
     Rectangle {
         anchors.fill: infos
@@ -48,7 +54,7 @@ Item {
 
             Text {
                 id: value_unused
-                text: "33"
+                text: set_unused()
                 font.bold: true
                 font.pointSize: 15
                 color: "#ee4e34"
@@ -88,7 +94,7 @@ Item {
 
             Text {
                 id: value_used
-                text: "0"
+                text: set_used()
                 font.bold: true
                 font.pointSize: 15
                 color: "#ee4e34"
@@ -137,6 +143,81 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
             }
+        }
+    }
+
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    function set_unused() {
+        if(bv == 1) {
+            if(tv1 == 1){
+                if(tv2==32){
+                    if(tv3==1){
+                        return 0
+                    }else{
+                        return 0
+                    }
+                }else{
+                    if(tv3==1){
+                        return 31
+                    }else{
+                        return 32
+                    }
+                }
+            }else{
+                if(tv2==32){
+                    if(tv3==1){
+                        return 0
+                    }else{
+                        return 1
+                    }
+                }else{
+                    if(tv3==1){
+                        return 32
+                    }else{
+                        return 33
+                    }
+                }
+            }
+        }else{
+            return 33
+        }
+
+    }
+
+    function set_used() {
+        if(bv == 1) {
+            if(tv1 == 1){
+                if(tv2==32){
+                    if(tv3==1){
+                        return 33
+                    }else{
+                        return 33
+                    }
+                }else{
+                    if(tv3==1){
+                        return 2
+                    }else{
+                        return 1
+                    }
+                }
+            }else{
+                if(tv2==32){
+                    if(tv3==1){
+                        return 33
+                    }else{
+                        return 32
+                    }
+                }else{
+                    if(tv3==1){
+                        return 1
+                    }else{
+                        return 0
+                    }
+                }
+            }
+        }else{
+            return 0
         }
     }
 }

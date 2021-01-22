@@ -10,6 +10,12 @@ Window {
     Item {
         id: root
         anchors.fill: parent
+        property real main_terminal_value1: terminal.value1
+        property real main_terminal_value2: terminal.value1
+        property real main_terminal_value3: terminal.value3
+
+        property real main_bts_vlaue: bts.value
+
         Rectangle {
             anchors.fill: root
             color: "#fcedda"
@@ -17,17 +23,19 @@ Window {
 
         // =+++++++++++++++++++++++++++++++++++++++++++++++++++
         Bts {
-
+            id: bts
         }
 
         // =+++++++++++++++++++++++++++++++++++++++++++++++++++
         Terminal {
+            id: terminal
             x: root.width * 0.5
         }
 
 
         // =+++++++++++++++++++++++++++++++++++++++++++++++++++
         Infos {
+            id: infos
             y: root.height * 0.65
         }
 

@@ -67,6 +67,15 @@ Item {
             text: "On"
             anchors.verticalCenter: parent.verticalCenter
             x: 100
+            checkable: {
+                if((ct32.checked ) && (ctr.checked)){
+                    ct1.checked = false
+                    return false
+                }else{
+                    return true
+                }
+            }
+
             indicator: Rectangle {
                 implicitHeight: 26
                 implicitWidth: 48
@@ -155,6 +164,13 @@ Item {
             text: "On"
             anchors.verticalCenter: parent.verticalCenter
             x: 100
+            checkable: {
+                if(ct1.checked && ctr.checked){
+                    return false
+                }else{
+                    return true
+                }
+            }
             indicator: Rectangle {
                 implicitHeight: 26
                 implicitWidth: 48
@@ -243,6 +259,14 @@ Item {
             text: "On"
             anchors.verticalCenter: parent.verticalCenter
             x: 100
+            checkable: {
+                if((ct32.checked ) && (ct1.checked)){
+                    ctr.checked = false
+                    return false
+                }else{
+                    return true
+                }
+            }
             indicator: Rectangle {
                 implicitHeight: 26
                 implicitWidth: 48

@@ -153,7 +153,7 @@ Item {
             if(tv1 == 1){
                 if(tv2==32){
                     if(tv3==1){
-                        return 0
+                        return 31
                     }else{
                         return 0
                     }
@@ -190,7 +190,7 @@ Item {
             if(tv1 == 1){
                 if(tv2==32){
                     if(tv3==1){
-                        return 33
+                        return 2
                     }else{
                         return 33
                     }
